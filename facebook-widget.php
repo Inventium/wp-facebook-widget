@@ -9,7 +9,9 @@
  */
 
 $images = WP_PLUGIN_URL.'/wp-facebook-widget/images/';
-$fb_css_path = WP_PLUGIN_URL.'/wp-facebook-widget/css/fb.css';
+//$fb_css_path = WP_PLUGIN_URL.'/wp-facebook-widget/css/fb.css';
+
+$fb_css_path = 'https://github.com/doolin/wp-facebook-widget/blob/master/css/fb.css';
 
 
 
