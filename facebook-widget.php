@@ -10,46 +10,27 @@
 
 $images = WP_PLUGIN_URL.'/wp-facebook-widget/images/';
 
-$sm_copy = <<<EOF
-<table class="wiaw-facebook-media">
-<tr>
-
-<td class="twitter">
-<a id="twitter" href="http://twitter.com/websiteweekend"><img src="$images/facebook-icons-packed.png" alt="Twitter" name="Twitter" class="facebook_twitter"</a>
-</td>
-
-<td class="facebook">
-<a id="facebook" href="http://facebook.com/WebsiteInAWeekend"><img src="$images/facebook-icons-packed.png" alt="Facebook" name="Facebook" class="facebook_facebook"</a>
-</td>
-
-<td class="linkedin">
-<a id="linkedin" href="http://linkedin.com/in/davidmdoolin"><img src="$images/facebook-icons-packed.png" alt="Linkedin" name="Linkedin" class="facebook_linkedin"</a>
-</td>
-
-<td class="rss">
-<a id="rss" href="http://website-in-a-weekend.net/feed"><img src="$images/facebook-icons-packed.png" alt="RSS" name="RSS" class="facebook_rss"</a>
-</td>
 
 
-</tr>
-</table>
+$fb_copy = <<<EOF 
+Foo bar. 
 EOF;
 
-$css_url = WP_PLUGIN_URL.'/wp-facebook-widget/css/sm.css';
-$css_file = WP_PLUGIN_DIR.'/wp-facebook-widget/css/sm.css';
+$css_url = WP_PLUGIN_URL.'/wp-facebook-widget/css/fb.css';
+$css_file = WP_PLUGIN_DIR.'/wp-facebook-widget/css/fb.css';
 
 if (file_exists($css_file)) {
-	wp_register_style('sm_stylesheet', $css_url);
-	wp_enqueue_style('sm_stylesheet');
+	wp_register_style('fb_stylesheet', $css_url);
+	wp_enqueue_style('fb_stylesheet');
 }
 
-if (!class_exists("sm_plugin_widget")) {
+if (!class_exists("fb_plugin_widget")) {
 
-	class sm_plugin_widget extends WP_Widget {
+	class fb_plugin_widget extends WP_Widget {
 			
-		function sm_plugin_widget() {
-			$widget_ops = array('classname' => 'widget_sm_links', 'description' => 'WiaW Social Media' );
-			$this->WP_Widget('sm_links', 'WiaW Social Media', $widget_ops);
+		function fb_plugin_widget() {
+			$widget_ops = array('classname' => 'widget_facebook', 'description' => 'WiaW Facebook' );
+			$this->WP_Widget('fb_links', 'WiaW Facebook', $widget_ops);
 		}
 
 		
@@ -58,7 +39,7 @@ if (!class_exists("sm_plugin_widget")) {
 		 * what readers see.
 		 */
 		function widget($args, $instance) {
-		   global $sm_copy;
+		   global $fb_copy;
 			extract($args, EXTR_SKIP);
 
 			echo $before_widget;
@@ -70,7 +51,7 @@ if (!class_exists("sm_plugin_widget")) {
 				echo $before_title . $title . $after_title; 
 			}
 
-         echo $sm_copy;
+         echo $fb_copy;
          echo $after_widget;
 		}
 
@@ -107,12 +88,12 @@ for entry feed: <input class="widefat"
 	}
 
 	function demo_widget_init() {
-		register_widget('sm_plugin_widget');
+		register_widget('fb_plugin_widget');
 	}
 	add_action('widgets_init', 'demo_widget_init');
 
 }
 
-$wpdpd = new sm_plugin_widget();
+$wpdpd = new fb_plugin_widget();
 
 ?>
