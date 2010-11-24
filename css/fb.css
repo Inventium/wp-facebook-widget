@@ -1,99 +1,26 @@
-/* The css code for the social media images goes here. */
-
-
-.wiaw-social-media tr{
-   position: relative;
-   width: 64px;
-   height: 64px;
+.fan_box .full_widget {
+    border: solid 1px #85019c;
 }
 
-.wiaw-social-media td{
-   width: 64px;
-   height: 64px;
+.fan_box .connect_action .name_block a {
+    color: #85019c;
 }
 
-.wiaw-social-media a{
-   display:block;
-   position: relative;
-   width: 64px;
-   height: 64px;
+.fan_box .connect_action .name_block a:hover {
+    color: #956000;
 }
 
-.wiaw-social-media a twitter{
-   position: relative;
-   height: 64px;
+.fan_box .full_widget .connect_top {
+    background: #f6c772 !important;
 }
 
-
-/* twitter */
-a .social_twitter{
-   clip:rect(0px 64px 64px 0px);
-   position: absolute;
-   left:0px;
+.fan_box .connections {
+    border-top: solid 1px #d7a9df;
 }
 
-a:hover .social_twitter{
-   clip:rect(64px 64px 128px 0px);
-   position: absolute;
-   top: -64px;
-   left:0px;
+.grid_item {
+    float: left;
+    overflow: hidden;
+    padding: 0 12px 8px 0 !important;
+    width: 50px;
 }
-
-/* facebook */
-a .social_facebook{
-   clip:rect(0px 128px 64px 64px);
-   position: absolute;
-   left:-64px;
-}
-
-a:hover .social_facebook{
-   clip:rect(64px 128px 128px 64px);
-   position: absolute;
-   top: -64px;
-   left:-64px;
-}
-
-/* linkedin */
-a .social_linkedin{
-   clip:rect(0px 192px 64px 128px);
-   position: absolute;
-   left:-128px;
-}
-
-a:hover .social_linkedin{
-   clip:rect(64px 192px 128px 128px);
-   position: absolute;
-   top: -64px;
-   left:-128px;
-}
-
-/* linkedin */
-a .social_linkedin{
-   clip:rect(0px 192px 64px 128px);
-   position: absolute;
-   left:-128px;
-}
-
-a:hover .social_linkedin{
-   clip:rect(64px 192px 128px 128px);
-   position: absolute;
-   top: -64px;
-   left:-128px;
-}
-
-/* rss */
-a .social_rss{
-   clip:rect(0px 256px 64px 192px);
-   position: absolute;
-   left:-192px;
-}
-
-a:hover .social_rss{
-   clip:rect(64px 256px 128px 192px);
-   position: absolute;
-   top: -64px;
-   left:-192px;
-}
-
-
-
