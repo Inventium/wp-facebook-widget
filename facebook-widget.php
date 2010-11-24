@@ -12,9 +12,13 @@ $images = WP_PLUGIN_URL.'/wp-facebook-widget/images/';
 
 
 
-$fb_copy = <<<EOF 
-Foo bar. 
+$fb_copy = <<<EOF
+<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("78dd82164d637cd1233f24025faf2221");</script>
+<div style="padding:7px 0px 0px 0px;">
+<fb:fan profile_id="216867431891" stream="0" connections="8" logobar="0" width="260" height="285" css="http://website-in-a-weekend.net/wp-content/themes/thesis_18/custom/custom.css"></fb:fan>
+</div>
 EOF;
+
 
 $css_url = WP_PLUGIN_URL.'/wp-facebook-widget/css/fb.css';
 $css_file = WP_PLUGIN_DIR.'/wp-facebook-widget/css/fb.css';
@@ -87,10 +91,10 @@ for entry feed: <input class="widefat"
 		}			
 	}
 
-	function demo_widget_init() {
+	function fb_widget_init() {
 		register_widget('fb_plugin_widget');
 	}
-	add_action('widgets_init', 'demo_widget_init');
+	add_action('widgets_init', 'fb_widget_init');
 
 }
 
