@@ -9,6 +9,7 @@
  */
 
 $images = WP_PLUGIN_URL.'/wp-facebook-widget/images/';
+$fb_css_path = WP_PLUGIN_URL.'/wp-facebook-widget/css/fb.css';
 
 
 
@@ -16,7 +17,7 @@ $fb_copy_spare = <<<EOF
 <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("78dd82164d637cd1233f24025faf2221");</script>
 <div style="padding:7px 0px 0px 0px;">
 <fb:fan profile_id="216867431891" stream="0" connections="8" logobar="0" width="260" height="285" 
-css="http://website-in-a-weekend.net/wp-content/themes/thesis_18/custom/custom.css"></fb:fan>
+css="$fb_css_path"></fb:fan>
 </div>
 EOF;
 
